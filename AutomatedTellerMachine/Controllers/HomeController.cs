@@ -50,8 +50,8 @@ namespace AutomatedTellerMachine.Controllers
             {
                 return Content(serial.ToLower());
             }
+            // return Content(serial);
             return Content(serial);
-          
         }
     }
 }
