@@ -12,12 +12,18 @@ namespace AutomatedTellerMachine
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+            //to retrieve the serial number
+            routes.MapRoute(
+               name: "Serial number",
+               url: "serial/{letterCase}",
+               defaults: new { controller = "Home", action = "Serial", letterCase="upper" }
+           );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
         }
     }
 }
