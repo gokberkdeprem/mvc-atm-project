@@ -9,7 +9,7 @@ namespace AutomatedTellerMachine.Controllers
 {
     public class CheckingAccountController : Controller
     {
-        // GET: CheckingAccountsdf
+        // GET: CheckingAccount
         public ActionResult Index()
         {
             return View();

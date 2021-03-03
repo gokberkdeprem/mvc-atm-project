@@ -12,8 +12,8 @@ namespace AutomatedTellerMachine.Models
         public int Id { get; set; }
         
         [Required]
-        //[StringLength(10, MinimumLength =6)]
-        //[Column(TypeName = "varchar")]
+        [StringLength(10, MinimumLength = 6)]
+        [Column(TypeName = "varchar")]
         [RegularExpression(@"\d{6,10}", ErrorMessage = "Number must be around 6-10")]
         [Display(Name="Account #")]
         public string AccountNumber { get; set; }
@@ -39,6 +39,11 @@ namespace AutomatedTellerMachine.Models
 
         //added for db
         public virtual ApplicationUser User { get; set; }
+
+        [Required]
         public string ApplicationUserId { get; set; }
+
+        public virtual ICollection<Transaction> Transactions { get; set; }
+
     }
 }
