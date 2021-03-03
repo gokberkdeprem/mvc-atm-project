@@ -17,11 +17,11 @@ namespace AutomatedTellerMachine.Models
         public string AccountNumber { get; set; }
 
         [Required]
-        [Display(Name = "FirstName")]
+        [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
         [Required]
-        [Display(Name = "LastName")]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
     
   
